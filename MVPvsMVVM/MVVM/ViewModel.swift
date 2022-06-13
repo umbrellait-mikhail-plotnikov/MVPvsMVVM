@@ -34,8 +34,8 @@ class ViewModel {
         }
     }
 
-    func setActualModel(text: String) {
-        actualModel = MVVMModel(text: text)
+    init() {
+        self.actualModel = MVVMModel(text: text)
     }
 
     func startRefresh() {

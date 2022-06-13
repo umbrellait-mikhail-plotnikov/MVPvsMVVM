@@ -35,7 +35,6 @@ class MVVMViewController: UIViewController {
         super.viewDidLoad()
 
         viewModel = ViewModel()
-        viewModel?.setActualModel(text: "")
         viewModel?.startRefresh()
     }
 }
