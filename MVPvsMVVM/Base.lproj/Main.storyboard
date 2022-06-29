@@ -78,7 +78,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-652" y="193"/>
+            <point key="canvasLocation" x="-1138" y="200"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="CSr-gZ-7BY">
@@ -88,31 +88,51 @@
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MYJ-Ha-KoC">
-                                <rect key="frame" x="16" y="763" width="55" height="31"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="MVP"/>
-                                <connections>
-                                    <segue destination="BYZ-38-t0r" kind="show" id="cgG-Eg-57d"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R6j-7v-X5M">
-                                <rect key="frame" x="307" y="763" width="67" height="31"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="MVVM"/>
-                                <connections>
-                                    <segue destination="j5t-ba-E5Y" kind="show" id="HU2-Zp-Ba3"/>
-                                </connections>
-                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="N6W-yu-g1T">
+                                <rect key="frame" x="16" y="364.66666666666669" width="358" height="125"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ozY-td-U4S">
+                                        <rect key="frame" x="0.0" y="0.0" width="358" height="31"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="MVP"/>
+                                        <connections>
+                                            <segue destination="BYZ-38-t0r" kind="show" id="xtP-uu-ITe"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I7e-33-QEq">
+                                        <rect key="frame" x="0.0" y="47" width="358" height="31"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="MVVM"/>
+                                        <connections>
+                                            <segue destination="j5t-ba-E5Y" kind="show" id="zf4-9J-uNU"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PuS-3R-dnf">
+                                        <rect key="frame" x="0.0" y="94" width="358" height="31"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="RxMVVM"/>
+                                        <connections>
+                                            <segue destination="ZKC-Gp-x1E" kind="show" id="HuN-8V-IMr"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="ozY-td-U4S" secondAttribute="trailing" id="172-Ne-j1q"/>
+                                    <constraint firstItem="I7e-33-QEq" firstAttribute="leading" secondItem="N6W-yu-g1T" secondAttribute="leading" id="Nn4-F9-M0o"/>
+                                    <constraint firstItem="ozY-td-U4S" firstAttribute="leading" secondItem="N6W-yu-g1T" secondAttribute="leading" id="VjD-o5-axj"/>
+                                    <constraint firstItem="PuS-3R-dnf" firstAttribute="leading" secondItem="N6W-yu-g1T" secondAttribute="leading" id="WHK-fM-ABI"/>
+                                    <constraint firstAttribute="trailing" secondItem="I7e-33-QEq" secondAttribute="trailing" id="ogp-Uw-wCg"/>
+                                    <constraint firstAttribute="trailing" secondItem="PuS-3R-dnf" secondAttribute="trailing" id="wKV-wx-cfW"/>
+                                </constraints>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Fka-BD-34K"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="Fka-BD-34K" firstAttribute="trailing" secondItem="R6j-7v-X5M" secondAttribute="trailing" constant="16" id="49M-qf-yfR"/>
-                            <constraint firstItem="Fka-BD-34K" firstAttribute="bottom" secondItem="R6j-7v-X5M" secondAttribute="bottom" constant="16" id="985-Vk-j9U"/>
-                            <constraint firstItem="R6j-7v-X5M" firstAttribute="leading" relation="lessThanOrEqual" secondItem="MYJ-Ha-KoC" secondAttribute="trailing" priority="250" constant="260" id="JKN-Cf-rrx"/>
-                            <constraint firstItem="Fka-BD-34K" firstAttribute="bottom" secondItem="MYJ-Ha-KoC" secondAttribute="bottom" constant="16" id="Q5u-pP-MHy"/>
-                            <constraint firstItem="MYJ-Ha-KoC" firstAttribute="leading" secondItem="Fka-BD-34K" secondAttribute="leading" constant="16" id="t1k-6u-0Ic"/>
+                            <constraint firstItem="Fka-BD-34K" firstAttribute="trailing" secondItem="N6W-yu-g1T" secondAttribute="trailing" constant="16" id="0fi-mu-Gc6"/>
+                            <constraint firstItem="N6W-yu-g1T" firstAttribute="centerY" secondItem="Fka-BD-34K" secondAttribute="centerY" id="5a9-4D-bHV"/>
+                            <constraint firstItem="N6W-yu-g1T" firstAttribute="centerX" secondItem="Fka-BD-34K" secondAttribute="centerX" id="rXe-vV-jza"/>
+                            <constraint firstItem="N6W-yu-g1T" firstAttribute="leading" secondItem="Fka-BD-34K" secondAttribute="leading" constant="16" id="udv-cO-uzt"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -181,7 +201,67 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FkL-Ed-0Mv" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="700" y="200"/>
+            <point key="canvasLocation" x="18" y="200"/>
+        </scene>
+        <!--RxMVVM View Controller-->
+        <scene sceneID="HGt-0z-deX">
+            <objects>
+                <viewController id="ZKC-Gp-x1E" customClass="RxMVVMViewController" customModule="MVPvsMVVM" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Rzx-kv-QKo">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="790"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="RxMVVM" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lqs-6W-MJD">
+                                <rect key="frame" x="16" y="31.999999999999996" width="358" height="44.666666666666657"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="37"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PU6-dh-fYT">
+                                <rect key="frame" x="16" y="174.66666666666666" width="358" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ei8-28-Gwd">
+                                <rect key="frame" x="16" y="227.66666666666666" width="358" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dAP-Cg-5ay">
+                                <rect key="frame" x="16" y="108.66666666666667" width="358" height="34.000000000000014"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="p5F-no-a2R"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Lqs-6W-MJD" firstAttribute="top" secondItem="p5F-no-a2R" secondAttribute="top" constant="32" id="1DB-1F-t3S"/>
+                            <constraint firstItem="PU6-dh-fYT" firstAttribute="top" secondItem="dAP-Cg-5ay" secondAttribute="bottom" constant="32" id="2LU-Rj-tCH"/>
+                            <constraint firstItem="dAP-Cg-5ay" firstAttribute="top" secondItem="Lqs-6W-MJD" secondAttribute="bottom" constant="32" id="9Sl-fD-HQN"/>
+                            <constraint firstItem="p5F-no-a2R" firstAttribute="trailing" secondItem="ei8-28-Gwd" secondAttribute="trailing" constant="16" id="IlZ-Z2-32h"/>
+                            <constraint firstItem="ei8-28-Gwd" firstAttribute="leading" secondItem="p5F-no-a2R" secondAttribute="leading" constant="16" id="X9p-WO-8xG"/>
+                            <constraint firstItem="dAP-Cg-5ay" firstAttribute="leading" secondItem="p5F-no-a2R" secondAttribute="leading" constant="16" id="YWr-lu-dVV"/>
+                            <constraint firstItem="p5F-no-a2R" firstAttribute="trailing" secondItem="PU6-dh-fYT" secondAttribute="trailing" constant="16" id="l4W-dO-IXz"/>
+                            <constraint firstItem="p5F-no-a2R" firstAttribute="trailing" secondItem="Lqs-6W-MJD" secondAttribute="trailing" constant="16" id="nbG-qd-Z9K"/>
+                            <constraint firstItem="ei8-28-Gwd" firstAttribute="top" secondItem="PU6-dh-fYT" secondAttribute="bottom" constant="32" id="vAO-SH-nRo"/>
+                            <constraint firstItem="Lqs-6W-MJD" firstAttribute="leading" secondItem="p5F-no-a2R" secondAttribute="leading" constant="16" id="xui-Pd-mWE"/>
+                            <constraint firstItem="p5F-no-a2R" firstAttribute="trailing" secondItem="dAP-Cg-5ay" secondAttribute="trailing" constant="16" id="y3a-b9-Fbf"/>
+                            <constraint firstItem="PU6-dh-fYT" firstAttribute="leading" secondItem="p5F-no-a2R" secondAttribute="leading" constant="16" id="zbE-1z-Tch"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="1vd-Qz-s7k"/>
+                    <connections>
+                        <outlet property="dateLabel" destination="ei8-28-Gwd" id="cFV-lY-FaM"/>
+                        <outlet property="textField" destination="dAP-Cg-5ay" id="xGB-L7-CQC"/>
+                        <outlet property="textLabel" destination="PU6-dh-fYT" id="v6e-4D-qaZ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PSc-kb-o5H" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1212" y="200"/>
         </scene>
     </scenes>
     <resources>
